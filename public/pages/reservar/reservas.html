@@ -146,7 +146,7 @@
           <button onclick="limpiar()" class="btn btn-primary">Limpiar</button>
         </form>
       </fieldset>
-      <fieldset class="col-12 col-sm-5">
+      <fieldset class="col-12 col-sm-5 sticky-top">
         <legend class="border border-0 border-bottom">Acompañantes</legend>
         <table class="table">
           <thead>
@@ -168,7 +168,7 @@
         </table>
       </fieldset>
       <article
-        class="card col-12 col-sm-3 text-center border border-1 border-black m-2 p-2 overflow-hidden mx-auto"
+        class="card col-12 col-sm-3 text-center border border-1 border-black m-2 p-2 overflow-hidden mx-auto sticky-top"
         style="width: 12rem"
       >
         <h5>${package.name}</h5>
@@ -188,11 +188,50 @@
           </ul>
           <p>Precio: ${package.price}</p>
           <p>Fecha: ${package.date}</p>
-          <a href="./pages/reservar/reservas.html" class="btn btn-primary w-100"
-            >Reservar</a
-          >
         </div>
       </article>
+      <div class="row my-5">
+        <fieldset class="col-12 col-sm-4">
+          <legend class="border border-0 border-bottom">
+            Pago
+            <a href="../politicas/pago.html" class="fs-6 float-end"
+              >Politicas de pago</a
+            >
+          </legend>
+
+          <div class="container">
+            <button>Nequi</button>
+            <button>Bancolombia</button>
+            <button>Daviplata</button>
+          </div>
+          <form>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <!-- input con el valor a pagar -->
+                <label for="valor" class="col-form-label">Valor a pagar:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="valor"
+                  value="1360000"
+                  readonly
+                />
+              </div>
+              <div class="col-12 col-sm-6">
+                <!-- input con pago minimo que debe realizar -->
+                <label for="minimo" class="col-form-label">Pago minimo:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="minimo"
+                  value="680000"
+                  readonly
+                />
+              </div>
+            </div>
+          </form>
+        </fieldset>
+      </div>
     </div>
 
     <script>
