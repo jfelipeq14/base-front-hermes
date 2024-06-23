@@ -103,7 +103,7 @@ function loadContent() {
       "p-2",
       "overflow-hidden"
     );
-    article.style.width = "18rem";
+    article.style.width = "15rem";
     article.innerHTML = `
           <h5>${package.name}</h5>
           <img src="${
@@ -116,7 +116,7 @@ function loadContent() {
             </ul>
             <p>Precio: ${package.price}</p>
             <p>Fecha: ${package.date}</p>
-            <a href="#" class="btn btn-primary w-100">Reservar</a>
+            <a href="./pages/reservar/reservas.html" class="btn btn-primary w-100">Reservar</a>
           </div>
         `;
     sectionPackages.appendChild(article);
